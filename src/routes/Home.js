@@ -19,7 +19,7 @@ function Home() {
   }, []); // 빈 배열: 컴포넌트 첫 마운트 시 한 번만 실행
   return (
     <Container>
-      <Header>StarFlix</Header>
+      <Header>SnapFlick</Header>
       {loading ? (
         <Loading>Loading...</Loading>
       ) : (
@@ -51,6 +51,7 @@ const Header = styled.header`
   font-weight: 700;
   text-align: center;
   margin-bottom: 30px;
+  color: #82aaff;
 `;
 
 const Loading = styled.h1`
@@ -61,6 +62,9 @@ const Loading = styled.h1`
 
 const MovieList = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 `;
